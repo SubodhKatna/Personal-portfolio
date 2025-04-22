@@ -85,7 +85,7 @@ const Hero: React.FC = () => {
           className="flex justify-center space-x-5"
         >
           <motion.a
-            href="https://github.com/"
+            href="https://github.com/SubodhKatna"
             target="_blank"
             rel="noopener noreferrer"
             whileHover={{ y: -5, color: '#3b82f6' }}
@@ -94,7 +94,7 @@ const Hero: React.FC = () => {
             <Github size={24} />
           </motion.a>
           <motion.a
-            href="https://linkedin.com/"
+            href="https://www.linkedin.com/in/subodh-katna"
             target="_blank"
             rel="noopener noreferrer"
             whileHover={{ y: -5, color: '#3b82f6' }}
