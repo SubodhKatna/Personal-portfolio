@@ -50,7 +50,7 @@ const Hero: React.FC = () => {
           className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12"
         >
           <motion.a
-            href="\public\Specialized-CV.pdf"
+            href="/Specialized-CV.pdf"
             download
             className="px-8 py-3 border-2 border-primary-600 dark:border-primary-400 text-primary-600 dark:text-primary-400 hover:bg-primary-600/10 rounded-full font-medium transition-colors duration-300"
             whileHover={{ scale: 1.05 }}
