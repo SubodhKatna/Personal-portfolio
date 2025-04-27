@@ -1,19 +1,19 @@
-import React, { useRef } from 'react';
-import { motion, useScroll, useTransform } from 'framer-motion';
-import AnimatedText from '../ui/AnimatedText';
+import React, { useRef } from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
+import AnimatedText from "../ui/AnimatedText";
 
 const hometownImages = [
   {
-    url: 'https://images.pexels.com/photos/2526025/pexels-photo-2526025.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-    alt: 'Mountains in Himachal Pradesh',
+    url: "/camp.webp", // fixed typo from '.wbep' to '.webp' (assuming)
+    alt: "Mountains in Himachal Pradesh",
   },
   {
-    url: 'https://images.pexels.com/photos/2387876/pexels-photo-2387876.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-    alt: 'Forest in Himachal Pradesh',
+    url: "/hidimba.jpg",
+    alt: "Temple in Himachal Pradesh",
   },
   {
-    url: 'https://images.pexels.com/photos/8865367/pexels-photo-8865367.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-    alt: 'Temple in Himachal Pradesh',
+    url: "/shringa.jpg",
+    alt: "Temple in Himachal Pradesh",
   },
 ];
 
@@ -21,7 +21,7 @@ const Hometown: React.FC = () => {
   const sectionRef = useRef<HTMLElement>(null);
   const { scrollYProgress } = useScroll({
     target: sectionRef,
-    offset: ['start end', 'end start'],
+    offset: ["start end", "end start"],
   });
 
   const y = useTransform(scrollYProgress, [0, 1], [0, -100]);
@@ -46,7 +46,8 @@ const Hometown: React.FC = () => {
           </h2>
           <div className="w-20 h-1 bg-primary-600 mx-auto mt-4 mb-8"></div>
           <p className="max-w-2xl mx-auto text-dark-600 dark:text-gray-300">
-            Discover the beauty of Himachal Pradesh, India - the place I call home
+            Discover the beauty of Himachal Pradesh, India - the place I call
+            home
           </p>
         </motion.div>
 
@@ -68,6 +69,7 @@ const Hometown: React.FC = () => {
                 className="w-full h-auto rounded-lg shadow-lg"
               />
             </motion.div>
+
             <motion.div
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -80,6 +82,7 @@ const Hometown: React.FC = () => {
                 className="w-full h-auto rounded-lg shadow-lg"
               />
             </motion.div>
+
             <motion.div
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -104,13 +107,23 @@ const Hometown: React.FC = () => {
               Himachal Pradesh: The Land of Snow
             </h3>
             <p className="text-dark-600 dark:text-gray-300 mb-6 leading-relaxed">
-              Nestled in the western Himalayas, Himachal Pradesh is known for its stunning landscapes, snow-capped mountains, and lush forests. Growing up in this beautiful region has deeply influenced my creativity and approach to design and development.
+              Nestled in the western Himalayas, Himachal Pradesh is known for
+              its stunning landscapes, snow-capped mountains, and lush forests.
+              Growing up in this beautiful region has deeply influenced my
+              creativity and approach to design and development.
             </p>
             <p className="text-dark-600 dark:text-gray-300 mb-6 leading-relaxed">
-              The state is home to picturesque hill stations like Shimla, Manali, and Dharamshala, which attract tourists from around the world. The pristine rivers, dense forests, and magnificent mountains create a perfect backdrop for inspiration and innovation.
+              The state is home to picturesque hill stations like Shimla,
+              Manali, and Dharamshala, which attract tourists from around the
+              world. The pristine rivers, dense forests, and magnificent
+              mountains create a perfect backdrop for inspiration and
+              innovation.
             </p>
             <p className="text-dark-600 dark:text-gray-300 mb-6 leading-relaxed">
-              The rich cultural heritage of Himachal Pradesh, with its traditional arts, music, and festivals, has taught me the importance of blending functionality with aesthetics in my work as a developer.
+              The rich cultural heritage of Himachal Pradesh, with its
+              traditional arts, music, and festivals, has taught me the
+              importance of blending functionality with aesthetics in my work as
+              a developer.
             </p>
 
             <motion.div
@@ -125,12 +138,12 @@ const Hometown: React.FC = () => {
               </h4>
               <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 {[
-                  'Capital: Shimla',
-                  'Area: 55,673 km²',
+                  "Capital: Shimla",
+                  "Area: 55,673 km²",
                   'Known as: "Dev Bhoomi" (Land of Gods)',
-                  'Famous for: Adventure sports, temples, wildlife',
-                  'Main Languages: Hindi, Pahari',
-                  'Major Attractions: Shimla, Manali, Dharamshala',
+                  "Famous for: Adventure sports, temples, wildlife",
+                  "Main Languages: Hindi, Pahari",
+                  "Major Attractions: Shimla, Manali, Dharamshala",
                 ].map((fact, index) => (
                   <motion.li
                     key={index}

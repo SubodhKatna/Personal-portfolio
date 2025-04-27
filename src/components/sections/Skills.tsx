@@ -82,16 +82,19 @@ const Skills: React.FC = () => {
           ))}
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-          {filteredSkills.map((skill) => (
-            <div
-              key={skill.name}
-              className="flex items-center gap-4 p-4 bg-white dark:bg-dark-700 rounded-lg shadow-md"
-            >
-              <div className="text-primary-600 dark:text-primary-400">{skill.icon}</div>
-              <span className="font-medium text-dark-700 dark:text-white">{skill.name}</span>
-            </div>
-          ))}
+        {/* Scrollable Grid Container */}
+        <div className="max-h-[500px] overflow-y-auto pr-2">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            {filteredSkills.map((skill) => (
+              <div
+                key={skill.name}
+                className="flex items-center gap-4 p-4 bg-white dark:bg-dark-700 rounded-lg shadow-md"
+              >
+                <div className="text-primary-600 dark:text-primary-400">{skill.icon}</div>
+                <span className="font-medium text-dark-700 dark:text-white">{skill.name}</span>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>

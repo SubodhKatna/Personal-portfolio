@@ -20,7 +20,7 @@ const Hero: React.FC = () => {
           className="mb-6"
         >
           <h2 className="text-xl sm:text-2xl font-medium text-primary-600 dark:text-primary-400 mb-4">
-            Hi there, Myself
+            Hi there, I'm
           </h2>
           <h1 className="text-4xl sm:text-6xl md:text-7xl font-bold text-dark-800 dark:text-white mb-4">
             <AnimatedText text="Subodh Katna" className="justify-center" />
